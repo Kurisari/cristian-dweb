@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <canvas id="myCanvas" width="200" height="300" style="border: 1px outset #000;"></canvas>
+    <!-- Líneas rectas -->
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+    </script>
+    <!-- Arcos -->
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+    <!-- Quadratic Curve -->
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(75, 40);
+        ctx.quadraticCurveTo(25, 100, 75, 160);
+        ctx.quadraticCurveTo(125, 100, 75, 40);
+        ctx.stroke();
+    </script>
+    <canvas id="myCanvas2" width="200" height="200" style="border: 1px outset #000;"></canvas>
+    <!-- Smilie face -->
+    <script>
+        var canvas = document.getElementById('myCanvas2');
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+        ctx.moveTo(110, 75);
+        ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+        ctx.moveTo(65, 65);
+        ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+        ctx.moveTo(95, 65);
+        ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+        ctx.stroke();
+    </script>
+</body>
+</html>
