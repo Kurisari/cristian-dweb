@@ -2,55 +2,83 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>
-		Cristian Aragon
-	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cristian Aragon</title>
+	<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<style>
+		body {
+			background-image: url('BG.jpg');
+			background-size: cover;
+			color: #000;
+		}
+		.navbar-nav a {
+			color: #000 !important;
+		}
+		.navbar-nav a:hover {
+			color: #017bf5 !important;
+		}
+		.welcome-text {
+			color: #017bf5;
+		}
+		.content-text {
+			color: #000;
+		}
+		footer {
+			margin-top: 50px;
+			color: #000;
+		}
+	</style>
 </head>
-<body background="BG.jpg" link="#000" alink="#017bf5" vlink="#000">
-	<br />
-	<h3 align="center">
-		<img src="logo.png" width="100" height="70">
-		<!-- <font face="IMPACT" size="6">CAS🦾🤖</font> -->
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<font face="cinzel" size="4">
-			<a href="#">🏠INICIO</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#">🗃EXPERIENCIA</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="proyectos.html">🧑🏻‍💻PROYECTOS</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#">📒TAREAS</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#">📡CONTACTO</a>
-		</font>
-	</h3>
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<h1 align="center">
-		<font face="Lato" color="#017bf5" size="7">
-			BIENVENIDO A MI PÁGINA
-		</font>
-	</h1>
-	<h3 align="center">
-		<font face="Lato" color="#000" size="5">
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="logo.png" width="100" height="70" alt="Logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#">🏠INICIO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">🗃EXPERIENCIA</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="proyectos.html">💻PROYECTOS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">📒TAREAS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">📡CONTACTO</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container text-center mt-5">
+		<h1 class="welcome-text">BIENVENIDO A MI PÁGINA</h1>
+		<h3 class="content-text mt-4">
 			¡Hola! Soy Cristian Aragon, un estudiante de la Universidad Panamericana. 
 			En esta página encontrarás información sobre mi experiencia, proyectos, tareas y cómo contactarme.
-		</font>
-	</h3>
-	<br />
-	<h3 align="center">
-	<a href="#">
-		<font face="Lato" color="#000">PAGINA INICIAL</font>
-	</a>&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="#">
-		<font face="Lato" color="#012e67">CRISTIAN ARAGÓN</font>
-	</a>
-	</h3>
+		</h3>
+		<div class="mt-4">
+			<a href="#" class="btn btn-outline-dark">PAGINA INICIAL</a>
+			<a href="#" class="btn btn-outline-primary">CRISTIAN ARAGÓN</a>
+		</div>
+	</div>
 
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<footer align="center">
+	<footer class="text-center mt-5">
 		<p>Autor: CRISTIAN ARAGON 🦖<br><br>
-		<a href="mailto:hege@example.com">0250005@UP.EDU.MX</a></p>
+		<a href="mailto:0250005@UP.EDU.MX">0250005@UP.EDU.MX</a></p>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
