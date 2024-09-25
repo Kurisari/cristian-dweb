@@ -1,0 +1,46 @@
+/* Selectores básicos */
+
+p {
+    background-color: antiquewhite;
+}
+
+a{
+    background-color: blue;
+}
+
+h {
+    background-color: red;
+}
+
+h3 {
+    background-color: green !important;
+}
+
+/* Selectores de clase */
+
+.parrafo_principal {
+    background-color: yellow;
+    color: red;
+}
+
+.encabezado {
+    background-color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.link {
+    background-color: white;
+}
+
+.parrafo_secundario {
+    background-color: white;
+    color: brown;
+}
+
+/* Selectores de id */
+
+#subtitulo {
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
