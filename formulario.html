@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Registro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Formulario de Registro al Día de Videojuegos</h2>
+        <form id="myForm" onsubmit="submitForm(event)" class="mt-4" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Nombre Completo: *</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico: *</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Teléfono: *</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="file">Subir Captura de Transferencia: *</label>
+                <input type="file" class="form-control" id="file" name="file" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Comentarios:</label>
+                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            const form = document.getElementById("myForm");
+            const formData = new FormData(form);
+
+            // Convertir el archivo a base64
+            const fileInput = document.getElementById("file");
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onloadend = function() {
+                formData.append("file", reader.result); // Añadir archivo convertido a base64
+
+                fetch("https://script.google.com/macros/s/AKfycbygHaEGdUGYJgy3fwwa2ZMxZZdfR4k1ArPeEy7HAa6JekHS9Jc19c9TkiwsTAgHJHPP4g/exec", {
+                    method: "POST",
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Datos enviados correctamente");
+                    form.reset();
+                })
+                .catch(error => {
+                    alert("Error al enviar los datos");
+                    console.error("Error:", error);
+                });
+            };
+
+            reader.readAsDataURL(file); // Convertir el archivo a base64
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
