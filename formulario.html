@@ -74,7 +74,7 @@
             reader.onloadend = function() {
                 formData.append("file", reader.result); // Añadir archivo convertido a base64
 
-                fetch("https://script.google.com/macros/s/AKfycbygHaEGdUGYJgy3fwwa2ZMxZZdfR4k1ArPeEy7HAa6JekHS9Jc19c9TkiwsTAgHJHPP4g/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbznytfVnZ-M5pA_JNjkKHC5tabbKJnD0WUfTqz2NM6goKZEFQybgfWAJmo5eOYVIsyf/exec", {
                     method: "POST",
                     body: formData,
                 })
