@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto - Cristian Aragon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('/assets/BG.jpg');
+            background-size: cover;
+            color: #000;
+        }
+        .navbar-nav a {
+            color: #000 !important;
+        }
+        .navbar-nav a:hover {
+            color: #017bf5 !important;
+        }
+        .content-text {
+            color: #000;
+        }
+        footer {
+            margin-top: 50px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/logo.png" width="100" height="70" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">🏠INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/experiencia.html">🗃EXPERIENCIA</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        💻PROYECTOS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/pages/clases/hola_mundo.html">Hola Mundo</a>
+                        <a class="dropdown-item" href="/pages/clases/meme.html">Meme</a>
+                        <a class="dropdown-item" href="/pages/clases/tablas.html">Tablas</a>
+                        <a class="dropdown-item" href="/pages/clases/canvas.html">Canvas</a>
+                        <a class="dropdown-item" href="/pages/clases/estilos.html">Estilos</a>
+                        <a class="dropdown-item" href="/pages/clases/tipos_de_selectores.html">Tipos de selectores</a>
+                        <a class="dropdown-item" href="/pages/clases/index_bootstrap.html">Index Bootstrap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/pages/practica_examen/practica_examen.html">Práctica examen 1</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/pages/exámenes/examen1/examen_p1.html">Examen 1</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        📒TAREAS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://pollos-el-guero.netlify.app">Restauran "Pollos El Güero"</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">📡CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center mt-5">
+        <h1 class="content-text">CONTACTO</h1>
+        <h3 class="content-text mt-4">
+            Si tienes alguna pregunta o deseas más información, no dudes en contactarme. Completa el formulario a continuación o utiliza los datos de contacto proporcionados.
+        </h3>
+
+        <div class="mt-4">
+            <h4 class="content-text">Datos de Contacto:</h4>
+            <p class="content-text">📞 Teléfono: (123) 456-7890</p>
+            <p class="content-text">✉️ Correo Electrónico: <a href="mailto:0250005@UP.EDU.MX">0250005@UP.EDU.MX</a></p>
+        </div>
+
+        <form class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Enviar</button>
+        </form>
+
+        <div class="mt-4">
+            <a href="#" class="btn btn-outline-dark">VOLVER A INICIO</a>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Autor: CRISTIAN ARAGON 🦖<br><br>
+        <a href="mailto:0250005@UP.EDU.MX">0250005@UP.EDU.MX</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
