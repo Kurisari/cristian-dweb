@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.calculadora {
+    background-color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.625em rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    width: 300px; /* Ancho inicial para la calculadora básica */
+    height: auto;
+    transition: width 0.5s ease; /* Animación de ancho */
+}
+
+.calculadora.cientifica {
+    width: 750px; /* Ancho de la calculadora en modo científico */
+}
+
+.pantalla {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    font-size: 1.5rem;
+    height: 3em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    text-align: right;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em; 
+    flex-wrap: wrap;
+}
+
+.grupo-principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
+    flex: 1;
+    min-width: 45%;
+}
+
+.grupo-cientifico {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    opacity: 0;
+    max-height: 0; /* Limita la altura máxima para un deslizamiento suave */
+    transform: translateY(-20px); /* Mueve los botones hacia arriba */
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
+}
+
+.grupo-cientifico.visible {
+    opacity: 1;
+    max-height: 500px; /* Asegúrate de que sea lo suficientemente grande para todos los botones */
+    transform: translateY(0); /* Desliza los botones hacia abajo */
+}
+
+.oculto {
+    display: none;
+}
+
+.toggle-cientifica {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #309af0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.toggle-cientifica:hover {
+    background-color: #174d79;
+}
+
+button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 0.25em;
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 3em;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+.operador {
+    background-color: #309af0;
+    color: white;
+}
+
+.operador:hover {
+    background-color: #174d79;
+}
+
+.igual {
+    background-color: #8CA6FC;
+    color: white;
+    grid-column: span 4;
+}
+
+.igual:hover {
+    background-color: #44527d;
+}
+
+.limpiar {
+    background-color: #f44336;
+    color: white;
+}
+
+.limpiar:hover {
+    background-color: #da190b;
+}
+
+.cientifico {
+    background-color: #f72e74;
+    color: white;
+}
+
+.cientifico:hover {
+    background-color: #6e1434;
+}

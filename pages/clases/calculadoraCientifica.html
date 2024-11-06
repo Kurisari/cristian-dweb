@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../../css/calculadoraCientifica.css">
+</head>
+<body>
+    <div class="calculadora" id="calculadora">
+        <div class="pantalla" id="pantalla">0</div>
+        <div class="botones">
+            <div class="grupo-principal">
+                <button onclick="agregarNumero('7')">7</button>
+                <button onclick="agregarNumero('8')">8</button>
+                <button onclick="agregarNumero('9')">9</button>
+                <button class="operador" onclick="agregarOperador('/')">/</button>
+                <button onclick="agregarNumero('4')">4</button>
+                <button onclick="agregarNumero('5')">5</button>
+                <button onclick="agregarNumero('6')">6</button>
+                <button class="operador" onclick="agregarOperador('*')">x</button>
+                <button onclick="agregarNumero('1')">1</button>
+                <button onclick="agregarNumero('2')">2</button>
+                <button onclick="agregarNumero('3')">3</button>
+                <button class="operador" onclick="agregarOperador('-')">-</button>
+                <button class="limpiar" onclick="limpiar()">C</button>
+                <button onclick="agregarNumero('0')">0</button>
+                <button onclick="agregarDecimal()">.</button>
+                <button class="operador" onclick="agregarOperador('+')">+</button>
+                <button class="igual" onclick="resolver()">=</button>
+            </div>
+
+            <div class="grupo-cientifico" id="grupo-cientifico">
+                <button onclick="calcularFuncion('sin')" class="cientifico">sin</button>
+                <button onclick="calcularFuncion('cos')" class="cientifico">cos</button>
+                <button onclick="calcularFuncion('tan')" class="cientifico">tan</button>
+                <button onclick="calcularFuncion('log')" class="cientifico">log</button>
+                <button onclick="calcularFuncion('exp')" class="cientifico">exp</button>
+
+                <button onclick="calcularFuncion('asin')" class="cientifico">arcsin</button>
+                <button onclick="calcularFuncion('acos')" class="cientifico">arccos</button>
+                <button onclick="calcularFuncion('atan')" class="cientifico">arctan</button>
+                <button onclick="calcularFuncion('sinh')" class="cientifico">sinh</button>
+                <button onclick="calcularFuncion('cosh')" class="cientifico">cosh</button>
+                <button onclick="calcularFuncion('tanh')" class="cientifico">tanh</button>
+                <button onclick="calcularFuncion('sqrt')" class="cientifico">√</button>
+                <button onclick="calcularFuncion('cbrt')" class="cientifico">∛</button>
+                <button onclick="calcularFuncion('pow')" class="cientifico">xʸ</button>
+                <button onclick="calcularFuncion('factorial')" class="cientifico">x!</button>
+                <button onclick="calcularFuncion('pi')" class="cientifico">π</button>
+                <button onclick="calcularFuncion('e')" class="cientifico">e</button>
+            </div>
+
+            <button class="toggle-cientifica" onclick="toggleCientifica()" id="boton-cientifica">Modo Científico</button>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/calculadoraCientifica.js"></script>
+</body>
+</html>
