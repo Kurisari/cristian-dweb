@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Edad</title>
+    <script type="text/javascript" src="../js/validador.js"></script>
+</head>
+<body>
+    <h1>Selecciona tu edad</h1>
+    <input type="button" value="-18" id="menor" onclick="alert('Estás muy pequeño, no puedes entrar')">
+    <input type="button" value="+18" id="mayor" onclick="alert('Bienvenido, puedes pasar')">
+
+    <input type="number" id="edad" placeholder="Ingresa tu edad">
+    <input type="button" value="Validar" id="validar" onclick="validarEdad()">
+</body>
+</html>
